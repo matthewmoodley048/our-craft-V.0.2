@@ -5,7 +5,7 @@ import { Vector3 } from "three"
 import { useEffect } from "react"
 import { Keyboard } from "../hooks/Keyboard"
 
-const JUMP_FORCE = 4
+const JUMP_FORCE = 4.5
 const SPEED = 4
 
 
@@ -14,7 +14,7 @@ export const Player = () => {
 
       const {camera} = useThree()
       const [ref,api] = useSphere(() => ({
-         mass:1,
+         mass: 1,
          type: 'Dynamic',
          position:[0,1,0]
       }))
