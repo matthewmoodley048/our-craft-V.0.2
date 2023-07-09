@@ -8,6 +8,7 @@ import { FPV } from "./components/FPV";
 import { Cubes } from "./components/Cubes";
 import { TextureSelector } from "./components/TextureSelector";
 import { Menu } from "./components/Menu";
+import {WorldGenerator} from "./components/WorldGenerator"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Player/>
            <Cubes/>
           <Ground/>
+        <WorldGenerator/>
         </Physics>
       </Canvas>
       <div className="absolute centered cursor">+</div>

@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import { useStore } from '../hooks/useStore'
 import { Keyboard } from '../hooks/Keyboard'
 import { dirtImg, grassImg, woodImg, planksImg } from '../images/images'
-
+import { Box, Text } from '@chakra-ui/react'
 const images = {
     dirt: dirtImg,
     grass: grassImg,
@@ -11,7 +11,7 @@ const images = {
 }
 
 export const TextureSelector = () => {
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(true)
     const [activeTexture,setTexture] = useStore((state) => [state.texture,state.setTexture])
     const {
         dirt,
@@ -34,25 +34,31 @@ export const TextureSelector = () => {
         }
     }, [setTexture,dirt,grass,wood,planks])
 
-    useEffect(() => {
-        const visiblityTimeout = setTimeout(() => {
-            setVisible(false)
-        },2000 )
-        setVisible(true)
-        return () => {
-          clearTimeout(visiblityTimeout)  
-        }
-    }, [activeTexture])
+    // useEffect(() => {
+    //     const visiblityTimeout = setTimeout(() => {
+    //         setVisible(false)
+    //     },2000 )
+    //     setVisible(true)
+    //     return () => {
+    //       clearTimeout(visiblityTimeout)  
+    //     }
+    // }, [activeTexture])
+
 
     return visible && (
         <div className='absolute texture-selector'>
          {Object.entries(images).map(([k,src]) => {
-           return (<img 
+           return (
+           <Box bgColor={'grey'} flexDir={'row'} height={'125%'} padding={50} width={'100%'}>
+           <Box>
+           <img 
             key={k} 
             src = {src}
             alt={k}
             className={`${k === activeTexture ? 'active' : ''}`}
-           />)
+           />
+           </Box>
+           </Box>)
          })}
         </div>
     )
