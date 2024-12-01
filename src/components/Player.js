@@ -5,7 +5,7 @@ import { Vector3 } from "three"
 import { useEffect } from "react"
 import { Keyboard } from "../hooks/Keyboard"
 
-const JUMP_FORCE = 4
+const JUMP_FORCE = 6
 const SPEED = 4
 
 

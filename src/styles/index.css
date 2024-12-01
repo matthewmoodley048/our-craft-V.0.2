@@ -53,6 +53,16 @@ body {
   color: aliceblue;
 }
 
+.controls-list {
+  right: 0px;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-style: ridge;
+  padding: 8px;
+  border: 2px solid rgb(128, 128, 128);
+  font-size: 12px;
+}
+
 .texture-selector {
   position: absolute;
   /* or 'fixed' if you want it to stay in place when scrolling */

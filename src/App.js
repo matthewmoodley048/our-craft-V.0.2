@@ -8,23 +8,25 @@ import { FPV } from "./components/FPV";
 import { Cubes } from "./components/Cubes";
 import { TextureSelector } from "./components/TextureSelector";
 import { Menu } from "./components/Menu";
+import { ControlsList } from "./components/ControlsList";
 
 function App() {
   return (
     <>
       <Canvas>
-        <Sky sunPosition={[1100,100,20]}/>
-        <ambientLight intensity={0.5}/>
-        <FPV/>
+        <Sky sunPosition={[1100, 100, 20]} />
+        <ambientLight intensity={0.5} />
+        <FPV />
         <Physics>
-          <Player/>
-           <Cubes/>
-          <Ground/>
+          <Player />
+          <Cubes />
+          <Ground />
         </Physics>
       </Canvas>
       <div className="absolute centered cursor">+</div>
-      <TextureSelector/>
-      <Menu/>
+      <TextureSelector />
+      <Menu />
+      <ControlsList />
     </>
   );
 }
