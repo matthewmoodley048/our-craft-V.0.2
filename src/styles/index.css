@@ -1,69 +1,75 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  html,
-  body,
-  #root {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: lightblue;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    overflow: hidden;
-  }
-  
-  body {
-    position: fixed;
-    overflow: hidden;
-    overscroll-behavior-y: none;
-    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-    font-size: 40px;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .fixed {
-    position: fixed;
-  }
-  
-  .relative {
-    position: relative;
-  }
-  
-  .absolute {
-    position: absolute;
-  }
+  box-sizing: border-box;
+}
 
-  .centered{
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-  }
-  .cursor{
-    color: aliceblue;
-  }
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
 
-  .texture-selector {
-    transform: scale(10%);
-    bottom:-150%;
-    right:71%;
-    display: block;
-  }
+body {
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-size: 40px;
+}
 
-  .texture-selector  img.active {
-    border: 50px solid rgb(255, 192, 2);
-  }
+.flex {
+  display: flex;
+}
 
-  .menu {
-    top: 0px;
-    left: 10px;
-  }
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor {
+  color: aliceblue;
+}
+
+.texture-selector {
+  position: absolute;
+  /* or 'fixed' if you want it to stay in place when scrolling */
+  bottom: -25%;
+  left: 50%;
+  transform: translate(-50%, 0%) scale(8%);
+  display: flex;
+  border: 50px solid rgb(128, 128, 128);
+  border-style: outset;
+}
+
+
+.texture-selector img.active {
+  border: 50px solid rgb(118, 149, 255);
+}
+
+.menu {
+  top: 0px;
+  left: 10px;
+}
