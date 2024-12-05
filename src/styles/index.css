@@ -66,9 +66,9 @@ body {
 .texture-selector {
   position: absolute;
   /* or 'fixed' if you want it to stay in place when scrolling */
-  bottom: -25%;
+  bottom: 0px;
   left: 50%;
-  transform: translate(-50%, 0%) scale(8%);
+  transform: translate(-50%, 40%) scale(8%);
   display: flex;
   border: 50px solid rgb(128, 128, 128);
   border-style: outset;
